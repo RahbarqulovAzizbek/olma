@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+
+import django_heroku
 import environ
 env = environ.Env(
     DEBUG=(bool, False)
@@ -147,4 +149,8 @@ SMS_USERNAME = 'academy.uz'
 
 SMS_PASSWORD = 'JsM2*12N@ps8'
 
+
+
+
+django_heroku.settings(locals())
 
